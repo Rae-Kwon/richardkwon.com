@@ -1,0 +1,2 @@
+# Prevent linting on Next TS file
+next-env.d.ts

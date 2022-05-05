@@ -9,3 +9,6 @@ node_modules
 
 # VS Code Specific
 .vscode
+
+# TypeScript file
+tsconfig.tsbuildinfo

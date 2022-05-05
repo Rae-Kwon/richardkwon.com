@@ -5,3 +5,22 @@ coverage
 # Next.js specific
 .next
 .vercel
+next-env.d.ts
+
+# Mac Specific File
+.DS_STORE
+
+# Dependency directories
+node_modules
+
+#REPL history
+.next
+
+# VS Code Specific
+.vscode
+
+# Lock files
+package-lock.json
+
+# Asset folders
+public

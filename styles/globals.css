@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.change-cursor {
+  cursor: grab;
+  user-select: none;
+}
+
+.hero-heading {
+  font-size: clamp(40px, 8vw, 80px);
+}
+
+.hero-action-heading {
+  font-size: clamp(20px, 1vw, 60px);
+}
