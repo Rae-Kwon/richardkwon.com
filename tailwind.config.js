@@ -20,8 +20,8 @@ module.exports = {
       spacing: {
         "5p": "5%",
       },
-      minWidth: {
-        "200vmin": "200vmin",
+      gap: {
+        "8vw": "8vw",
       },
     },
   },
