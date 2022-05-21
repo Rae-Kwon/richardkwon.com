@@ -20,9 +20,6 @@ const Intro = () => {
           Software Developer
         </h1>
       </div>
-      <h2 className="font-subheadings stroke-black dark:stroke-white">
-        I learn to develop, and develop to learn
-      </h2>
     </div>
   );
 };
