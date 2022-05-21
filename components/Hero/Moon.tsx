@@ -1,8 +1,20 @@
 import { motion } from "framer-motion";
 
 const variants = {
-  isDark: { translateX: 0, opacity: 1, ease: "easeOut" },
-  isLight: { translateY: -1000, opacity: 0, ease: "easeIn" },
+  isDark: {
+    translateY: 0,
+    opacity: 1,
+    ease: "easeIn",
+    transition: { type: "spring", duration: 5, stiffness: 50 },
+    originX: 0.5,
+  },
+  isLight: {
+    translateY: -1000,
+    opacity: 0,
+    ease: "easeIn",
+    transition: { type: "spring", duration: 5, stiffness: 50 },
+    originX: 0.5,
+  },
 };
 
 const Moon = ({ theme, setTheme }: any) => {
@@ -14,6 +26,7 @@ const Moon = ({ theme, setTheme }: any) => {
       variants={variants}
       initial={false}
       className="w-40 h-40 rounded-full bg-white shadow-xl shadow-white absolute"
+      role="button"
     />
   );
 };
