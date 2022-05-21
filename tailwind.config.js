@@ -23,6 +23,9 @@ module.exports = {
       minWidth: {
         "200vmin": "200vmin",
       },
+      gap: {
+        "8p": "8%",
+      },
     },
   },
   darkMode: "class",

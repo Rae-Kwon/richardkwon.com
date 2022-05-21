@@ -7,7 +7,6 @@ import Sun from "./Sun";
 
 const Hero = () => {
   const [mounted, setMounted] = useState(false);
-
   const { resolvedTheme, setTheme } = useTheme();
 
   useEffect(() => setMounted(true), []);
@@ -15,14 +14,14 @@ const Hero = () => {
   if (!mounted) return null;
 
   return (
-    <header className="h-screen grid grid-rows-3 justify-center break-word">
+    <section className="h-screen overflow-y-auto grid grid-rows-3 justify-center break-word">
       <div className="flex justify-center items-center">
         <Sun theme={resolvedTheme} setTheme={setTheme} />
         <Moon theme={resolvedTheme} setTheme={setTheme} />
       </div>
       <Intro />
       <ActionArrow />
-    </header>
+    </section>
   );
 };
 export default Hero;
