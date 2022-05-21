@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const ActionArrow = () => {
   return (
-    <div className="flex justify-center items-end mb-8">
+    <div className="flex justify-center items-end mb-20">
       <div className="flex flex-col items-center">
         <h3 className="hero-action-heading">See what I can do</h3>
         <motion.svg
