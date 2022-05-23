@@ -20,7 +20,7 @@ const container = {
 const Tabs = ({ menuItems, barInView }: NavProps) => {
   return (
     <motion.nav
-      className="flex justify-center items-center w-full h-20 fixed bottom-0 bg-blue-400"
+      className="flex justify-center items-center w-full h-20 fixed bottom-0 bg-sky-400 dark:bg-midnight-blue z-10"
       variants={container}
       animate={barInView ? "hidden" : "show"}
     >

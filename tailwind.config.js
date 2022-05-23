@@ -10,9 +10,16 @@ module.exports = {
       fontFamily: {
         headings: ["Montserrat", ...defaultTheme.fontFamily.sans],
         subheadings: ["Open Sans", ...defaultTheme.fontFamily.sans],
+        text: ["Roboto", ...defaultTheme.fontFamily.sans],
+      },
+      screens: {
+        xs: "450px",
       },
       colors: {
         "midnight-blue": "#191970",
+        "midnight-dirt": "#220113",
+        "dark-cerulean": "#0F5076",
+        "light-cyan": "#DDFEEC",
       },
       boxShadow: {
         xl: "0 0 100px",
@@ -25,6 +32,11 @@ module.exports = {
       },
       gap: {
         "8p": "8%",
+      },
+      height: {
+        200: "50rem",
+        "6/7": "85.7142857%",
+        "1/7": "14.2857143%",
       },
     },
   },
