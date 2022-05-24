@@ -31,9 +31,6 @@ const ContactForm = ({ setSuccess }: ContactFormProps) => {
         process.env.EMAILJS_PUBLIC_KEY as string
       );
       setSuccess(true);
-      setTimeout(() => {
-        setSuccess(false);
-      }, 1500);
     } catch (error) {
       console.log(error);
     }
@@ -51,7 +48,7 @@ const ContactForm = ({ setSuccess }: ContactFormProps) => {
         <legend className="text-4xl text-white font-subheadings">
           Contact Me
         </legend>
-        <p className="col-span-2 text-white font-text w-1/2">
+        <p className="col-span-2 text-white font-text w-3/4">
           Send me a message so we can connect and talk about coding!
         </p>
         <input

@@ -2,7 +2,7 @@ import Ground from "./Ground";
 
 const Footer = () => {
   return (
-    <footer className=" h-200 relative">
+    <footer className=" h-240 relative">
       <Ground />
     </footer>
   );
