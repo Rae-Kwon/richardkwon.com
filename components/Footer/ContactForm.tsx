@@ -1,5 +1,7 @@
 import type { SubmitHandler } from "react-hook-form";
 import { useForm } from "react-hook-form";
+import { send } from "@emailjs/browser";
+import { Dispatch, useEffect } from "react";
 
 interface FormInputs {
   name: string;
@@ -8,18 +10,41 @@ interface FormInputs {
   message: string;
 }
 
-const ContactForm = () => {
+interface ContactFormProps {
+  setSuccess: Dispatch<boolean>;
+}
+
+const ContactForm = ({ setSuccess }: ContactFormProps) => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    reset,
+    formState: { errors, isSubmitSuccessful },
   } = useForm<FormInputs>();
 
-  const onSubmit: SubmitHandler<FormInputs> = (data) => {
-    console.log(data);
+  const onSubmit: SubmitHandler<FormInputs> = async (data) => {
+    try {
+      await send(
+        process.env.EMAILJS_SERVICE_ID as string,
+        process.env.EMAILJS_TEMPLATE_ID as string,
+        data,
+        process.env.EMAILJS_PUBLIC_KEY as string
+      );
+      setSuccess(true);
+      setTimeout(() => {
+        setSuccess(false);
+      }, 1500);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
-  console.log(errors);
+  useEffect(() => {
+    if (isSubmitSuccessful) {
+      reset();
+    }
+  }, [isSubmitSuccessful, reset]);
+
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <fieldset className="grid grid-cols-2 gap-6 pt-5 pb-10 px-10 mb-8">
@@ -40,13 +65,19 @@ const ContactForm = () => {
           }`}
         />
         <input
-          {...register("email", { required: true })}
+          {...register("email", {
+            required: true,
+            pattern: {
+              value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+              message: "Invalid email",
+            },
+          })}
           placeholder={errors.email ? "What's your email?" : "Email"}
           aria-label="Email"
-          className={`bg-dark-cerulean dark:bg-light-cyan px-5 h-14 col-span-2 xs:col-span-1 text-white dark:text-black font-text focus:outline-none ${
-            errors.subject
-              ? "placeholder:text-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-500"
-              : "placeholder:text-gray-300 dark:placeholder:text-gray-500 focus:border-sky-400 focus:ring-2 focus:ring-sky-400"
+          className={`bg-dark-cerulean dark:bg-light-cyan px-5 h-14 col-span-2 xs:col-span-1 font-text focus:outline-none ${
+            errors.email
+              ? "text-red-500 placeholder:text-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-500"
+              : "text-white dark:text-black placeholder:text-gray-300 dark:placeholder:text-gray-500 focus:border-sky-400 focus:ring-2 focus:ring-sky-400"
           }`}
         />
         <input
@@ -72,11 +103,12 @@ const ContactForm = () => {
         <input
           type="submit"
           role="button"
-          className="col-span-2 w-fit px-5 py-2 rounded justify-self-center bg-dark-cerulean dark:bg-light-cyan text-white dark:text-black font-text active:ring-2 active:ring-sky-400"
+          className="col-span-2 w-40 px-5 py-2 rounded justify-self-center bg-dark-cerulean dark:bg-light-cyan text-white dark:text-black font-text active:ring-2 active:ring-sky-400"
           value="Send Message"
         />
       </fieldset>
     </form>
   );
 };
+
 export default ContactForm;
