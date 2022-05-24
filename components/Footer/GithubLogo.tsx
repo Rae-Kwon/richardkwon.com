@@ -5,14 +5,22 @@ import GitHubLogoDark from "../../public/icons/GitHub-Mark-Dark.png";
 
 const GithubLogo = () => {
   const { resolvedTheme } = useTheme();
-  if (resolvedTheme === "dark") {
-    return (
-      <Image src={GitHubLogoLight} alt="Github Logo" width={55} height={55} />
-    );
-  } else {
-    return (
-      <Image src={GitHubLogoDark} alt="Github Logo" width={55} height={55} />
-    );
-  }
+  return (
+    <div className="flex hover:scale-110">
+      <a
+        target="_blank"
+        href="https://github.com/Rae-Kwon"
+        rel="noopener noreferrer"
+      >
+        <Image
+          src={resolvedTheme === "dark" ? GitHubLogoLight : GitHubLogoDark}
+          alt="Github Logo"
+          width={55}
+          height={55}
+          className="cursor-pointer"
+        />
+      </a>
+    </div>
+  );
 };
 export default GithubLogo;
