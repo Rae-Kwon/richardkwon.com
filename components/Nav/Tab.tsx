@@ -1,8 +1,11 @@
 import Link from "next/link";
-
-import type { TabProps } from "./types";
 import { navTo } from "./helperFunctions";
 import Icon from "./Icon";
+
+interface TabProps {
+  item: string;
+  link: string;
+}
 
 const Tab = ({ item, link }: TabProps) => {
   return (

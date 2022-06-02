@@ -1,11 +1,15 @@
 import projectData from "../../public/data/projects/index.json";
+import Header from "../Header";
 import Projects from "./Projects";
 
 const Works = () => {
   return (
-    <section id="works" className="pt-28 pb-56 overflow-x-hidden">
-      <div className="flex flex-col justify-center gap-72">
-        <Projects data={projectData} />
+    <section id="projects" className="overflow-x-hidden">
+      <div className="mx-10 sm:mx-32">
+        <Header heading="Projects" />
+        <div className="flex flex-col gap-52">
+          <Projects data={projectData} />
+        </div>
       </div>
     </section>
   );
