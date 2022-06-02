@@ -6,12 +6,12 @@ import Icon from "./Icon";
 
 const Tab = ({ item, link }: TabProps) => {
   return (
-    <div className="flex flex-col items-center">
-      <Icon link={link} />
-      <li>
-        <Link href={navTo(link)}>{item}</Link>
-      </li>
-    </div>
+    <Link href={navTo(link)}>
+      <div className="flex flex-col items-center cursor-pointer">
+        <Icon link={link} />
+        <li>{item}</li>
+      </div>
+    </Link>
   );
 };
 export default Tab;

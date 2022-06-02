@@ -2,7 +2,7 @@ import Ground from "./Ground";
 
 const Footer = () => {
   return (
-    <footer>
+    <footer id="contact">
       <Ground />
     </footer>
   );

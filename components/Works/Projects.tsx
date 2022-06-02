@@ -23,22 +23,24 @@ interface ProjectsProps {
 
 const projectContainer = {
   hidden: { opacity: 0, x: -1000 },
-  show: { opacity: 1, x: 0, transition: { duration: 1 } },
+  show: { opacity: 1, x: 0, transition: { duration: 2 } },
 };
 
 const Projects = ({ data }: ProjectsProps) => {
   return (
     <>
       {data.map((project) => (
-        <motion.div
+        <div
           key={project.id}
           className="flex justify-center mx-10 drop-shadow-xl sm:mx-32"
-          variants={projectContainer}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
         >
-          <div className="flex flex-col md:flex-row gap-6 bg-gray-200 p-3 rounded-3xl dark:bg-slate-400">
+          <motion.div
+            className="flex flex-col bg-gray-200 p-3 rounded-3xl md:flex-row dark:bg-slate-400"
+            variants={projectContainer}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+          >
             <div className="grid gap-6 3xl:grid-cols-8">
               <div className="flex justify-center 3xl:justify-start 3xl:col-span-4">
                 <ProjectImage
@@ -85,8 +87,8 @@ const Projects = ({ data }: ProjectsProps) => {
                 </div>
               </div>
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       ))}
     </>
   );
