@@ -4,7 +4,7 @@ import Tabs from "./Tabs";
 
 const Navbar = () => {
   const { ref, inView } = useInView();
-  const menuItems = ["Home", "About", "Skills", "Works", "Contact"];
+  const menuItems = ["Home", "Projects", "About", "Contact"];
   return (
     <>
       <Bar menuItems={menuItems} refObj={ref} />

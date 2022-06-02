@@ -1,7 +1,12 @@
+import type { Ref } from "react";
 import { motion } from "framer-motion";
-
-import type { NavProps } from "./types";
 import Tab from "./Tab";
+
+interface TabsProps {
+  menuItems: string[];
+  refObj?: Ref<HTMLDivElement>;
+  barInView?: boolean;
+}
 
 const container = {
   hidden: { opacity: 0, y: 1000 },
@@ -17,10 +22,10 @@ const container = {
   },
 };
 
-const Tabs = ({ menuItems, barInView }: NavProps) => {
+const Tabs = ({ menuItems, barInView }: TabsProps) => {
   return (
     <motion.nav
-      className="flex justify-center items-center w-full h-20 fixed bottom-0 shadow-lg bg-blue-400 dark:bg-blue-500 z-10"
+      className="flex justify-center items-center w-full h-24 fixed bottom-0 shadow-lg bg-blue-400 dark:bg-blue-500 z-10"
       variants={container}
       animate={barInView ? "hidden" : "show"}
     >
