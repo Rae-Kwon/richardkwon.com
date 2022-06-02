@@ -16,7 +16,7 @@
         "githubLink": "https://github.com/Rae-Kwon/fun-with-ai-frontend"
     },
     {
-        "id": 3,
+        "id": 2,
         "title": "Val-chan Discord Bot",
         "name": "vallhalla-cb-bot",
         "description": "A Discord bot for the mobile game Princess Connect Re:Dive that gets a users input and sends it to a Google Sheet. This allows easy, automatic logging of attack scores and easy maintenance for clan leads.",
