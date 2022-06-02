@@ -12,3 +12,6 @@ node_modules
 
 # TypeScript file
 tsconfig.tsbuildinfo
+
+# Local Netlify folder
+.netlify
