@@ -14,6 +14,7 @@ module.exports = {
       },
       screens: {
         xs: "450px",
+        "3xl": "1980px",
       },
       colors: {
         "midnight-blue": "#191970",
@@ -41,6 +42,9 @@ module.exports = {
       inset: {
         22: "5.5rem",
         "95px": "95px",
+      },
+      margin: {
+        "1/4": "50%",
       },
     },
   },

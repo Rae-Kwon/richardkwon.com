@@ -1,0 +1,48 @@
+[
+    {
+        "id": 1,
+        "title": "Fun With AI",
+        "name": "fun-with-ai",
+        "description": "A responsive web app that utilizes the power of OpenAI to give you a song based on your mood. Type in your mood to get a response from Lil Nost X or click on one of the prompts to help you.",
+        "technologies": [
+            {"name": "React", "logoSrc": "/icons/React-logo.png"},
+            {"name": "Next.js", "logoSrc": "/icons/Nextjs-logo.png"},
+            {"name": "TypeScript", "logoSrc": "/icons/Typescript-logo.png"},
+            {"name": "OpenAI", "logoSrc": "/icons/OpenAI-logo.svg"}
+        ],
+        "image": "/data/projects/images/fun-with-ai-preview.png",
+        "imageDescription": "Preview Image of Fun With AI web app.",
+        "siteLink": "https://bright-cassata-c74c95.netlify.app/",
+        "githubLink": "https://github.com/Rae-Kwon/fun-with-ai-frontend"
+    },
+    {
+        "id": 3,
+        "title": "Val-chan Discord Bot",
+        "name": "vallhalla-cb-bot",
+        "description": "A Discord bot for the mobile game Princess Connect Re:Dive that gets a users input and sends it to a Google Sheet. This allows easy, automatic logging of attack scores and easy maintenance for clan leads.",
+        "technologies": [
+            {"name": "JavaScript", "logoSrc": "/icons/Javascript-logo.png"},
+            {"name": "Discord API", "logoSrc": "/icons/Discord-logo.png"},
+            {"name": "Google Sheets API", "logoSrc": "/icons/GoogleSheets-logo.png"}
+        ],
+        "image": "/data/projects/images/discord-bot-preview.png",
+        "imageDescription": "Preview Image of Discord Bot.",
+        "githubLink": "https://github.com/Rae-Kwon/valhalla-cb-bot"
+    },
+    {
+        "id": 3,
+        "title": "Larrakia Language App for Kids",
+        "name": "larrakia-language-app-for-kids",
+        "description": "A web app for desktop that teaches kids some words from the Larrakia Australian Aboriginal language. The app allows you to play a few games to get to know the Larrakia language.",
+        "technologies": [
+            {"name": "React", "logoSrc": "/icons/React-logo.png"},
+            {"name": "Redux", "logoSrc": "/icons/Redux-logo.png"},
+            {"name": "JavaScript", "logoSrc": "/icons/Javascript-logo.png"},
+            {"name": "PostgreSql", "logoSrc": "/icons/PostgreSQL-logo.png"}
+        ],
+        "image": "/data/projects/images/larrakia-language-kids-preview.png",
+        "imageDescription": "Preview Image of Larrakia Language App for Kids web app.",
+        "siteLink": "https://larrakia-language-kids.herokuapp.com/",
+        "githubLink": "https://github.com/Rae-Kwon/larrakia-language-app"
+    }
+]
