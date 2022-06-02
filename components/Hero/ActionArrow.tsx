@@ -4,7 +4,7 @@ import Link from "next/link";
 const ActionArrow = () => {
   return (
     <div className="flex justify-center items-end mb-20">
-      <Link href="#works">
+      <Link href="#projects">
         <div className="flex flex-col items-center cursor-pointer">
           <h3 className="hero-action-heading">See what I can do</h3>
           <motion.svg

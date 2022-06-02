@@ -30,10 +30,7 @@ const Projects = ({ data }: ProjectsProps) => {
   return (
     <>
       {data.map((project) => (
-        <div
-          key={project.id}
-          className="flex justify-center mx-10 drop-shadow-xl sm:mx-32"
-        >
+        <div key={project.id} className="flex justify-center drop-shadow-xl">
           <motion.div
             className="flex flex-col bg-gray-200 p-3 rounded-3xl md:flex-row dark:bg-slate-400"
             variants={projectContainer}

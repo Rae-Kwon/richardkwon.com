@@ -1,12 +1,17 @@
+import type { Ref } from "react";
 import Link from "next/link";
 import { navTo } from "./helperFunctions";
 
-import type { NavProps } from "./types";
+interface BarProps {
+  menuItems: string[];
+  refObj?: Ref<HTMLDivElement>;
+  barInView?: boolean;
+}
 
-const bar = ({ menuItems, refObj }: NavProps) => {
+const Bar = ({ menuItems, refObj }: BarProps) => {
   return (
     <nav
-      className="flex w-full justify-center h-14 font-subheadings"
+      className="flex w-full justify-center h-14 font-subheadings pt-10"
       ref={refObj}
     >
       <ul className="flex w-4/5 justify-around items-center">
@@ -22,4 +27,4 @@ const bar = ({ menuItems, refObj }: NavProps) => {
     </nav>
   );
 };
-export default bar;
+export default Bar;

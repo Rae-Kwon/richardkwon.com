@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import Description from "./Description";
-import Header from "./Header";
+import Header from "../Header";
 
 const aboutContainer = {
   hidden: { opacity: 0, x: -1000 },
@@ -17,7 +17,7 @@ const About = () => {
       whileInView="show"
       viewport={{ once: true }}
     >
-      <Header />
+      <Header heading="About Me" />
       <Description />
     </motion.section>
   );
