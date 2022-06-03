@@ -44,12 +44,16 @@ const ContactForm = ({ setSuccess }: ContactFormProps) => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <fieldset className="grid grid-cols-2 gap-6 pt-5 pb-10 px-10 mb-8">
+      <fieldset className="grid grid-cols-2 gap-6 pt-5 pb-10 px-10 mb-10">
         <legend className="text-4xl text-white font-subheadings">
           Contact Me
         </legend>
         <p className="col-span-2 text-white font-text w-3/4">
           Send me a message so we can connect and talk about coding!
+        </p>
+        <p className="col-span-2 text-white font-text w-3/4">
+          Or if you&apos;re old school, send me an email at:
+          hello@richardkwon.com
         </p>
         <input
           {...register("name", { required: true })}
