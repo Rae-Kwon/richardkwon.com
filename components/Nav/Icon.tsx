@@ -3,7 +3,6 @@ interface IconProps {
 }
 
 const Icon = ({ link }: IconProps) => {
-  console.log(link);
   if (link === "home") {
     return (
       <svg
