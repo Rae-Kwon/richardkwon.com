@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import Link from "next/link";
 
 const ActionArrow = () => {
@@ -6,8 +6,8 @@ const ActionArrow = () => {
     <div className="flex justify-center items-end mb-20">
       <Link href="#projects">
         <div className="flex flex-col items-center cursor-pointer">
-          <h3 className="hero-action-heading">See what I can do</h3>
-          <motion.svg
+          <h2 className="hero-action-heading">See what I can do</h2>
+          <m.svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6"
             fill="none"
@@ -22,7 +22,7 @@ const ActionArrow = () => {
               strokeLinejoin="round"
               d="M19 9l-7 7-7-7"
             />
-          </motion.svg>
+          </m.svg>
         </div>
       </Link>
     </div>

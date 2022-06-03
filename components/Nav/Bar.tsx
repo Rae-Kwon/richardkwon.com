@@ -14,11 +14,11 @@ const Bar = ({ menuItems, refObj }: BarProps) => {
       className="flex w-full justify-center h-14 font-subheadings pt-10"
       ref={refObj}
     >
-      <ul className="flex w-4/5 justify-around items-center">
+      <div className="flex w-4/5 justify-around items-center">
         {menuItems.map((item, index) => {
           const link = item.toLowerCase();
           return (
-            <li key={index}>
+            <div key={index}>
               {link === "resume" ? (
                 <a
                   href="/RichardKwonResume.pdf"
@@ -30,10 +30,10 @@ const Bar = ({ menuItems, refObj }: BarProps) => {
               ) : (
                 <Link href={navTo(link)}>{item}</Link>
               )}
-            </li>
+            </div>
           );
         })}
-      </ul>
+      </div>
     </nav>
   );
 };

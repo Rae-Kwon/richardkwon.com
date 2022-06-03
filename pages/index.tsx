@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import { LazyMotion, domAnimation } from "framer-motion";
 import Head from "next/head";
 import About from "../components/About";
 import Footer from "../components/Footer";
@@ -24,11 +25,13 @@ const Home: NextPage = () => {
         <meta name="googlebot" content="index,follow" />
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
-      <Navbar />
-      <Hero />
-      <Works />
-      <About />
-      <Footer />
+      <LazyMotion features={domAnimation}>
+        <Navbar />
+        <Hero />
+        <Works />
+        <About />
+        <Footer />
+      </LazyMotion>
     </div>
   );
 };

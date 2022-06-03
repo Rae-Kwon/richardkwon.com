@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 const variants = {
   isDark: {
@@ -19,7 +19,7 @@ const variants = {
 
 const Moon = ({ theme, setTheme }: any) => {
   return (
-    <motion.div
+    <m.div
       aria-label="Toggle Light Mode"
       onClick={() => setTheme("light")}
       animate={theme === "dark" ? "isDark" : "isLight"}

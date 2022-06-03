@@ -1,10 +1,10 @@
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import LinkedInStamp from "../../public/icons/LinkedIn-Logo.png";
 
 const LinkedInLogo = () => {
   return (
-    <motion.div
+    <m.div
       className="flex text-center"
       whileHover={{ scale: 1.25, transition: { durtation: 0.5 } }}
     >
@@ -18,12 +18,13 @@ const LinkedInLogo = () => {
           alt="LinkedIn Logo"
           width={64}
           height={54.425}
-          placeholder="blur"
           className="dark:brightness-150 cursor-pointer"
+          loading="lazy"
+          placeholder="blur"
         />
         <p className="font-text">LinkedIn Profile</p>
       </a>
-    </motion.div>
+    </m.div>
   );
 };
 export default LinkedInLogo;
