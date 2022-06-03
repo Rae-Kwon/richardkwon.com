@@ -1,15 +1,17 @@
 import "../styles/globals.css";
 import { AppProps } from "next/app";
 import { ThemeProvider } from "next-themes";
-import { LazyMotion, domAnimation } from "framer-motion";
+import { LazyMotion } from "framer-motion";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
-    <ThemeProvider attribute="class" defaultTheme="system">
-      <LazyMotion features={domAnimation}>
+    <LazyMotion
+      features={async () => (await import("../framerFeatures")).default}
+    >
+      <ThemeProvider attribute="class" defaultTheme="system">
         <Component {...pageProps} />
-      </LazyMotion>
-    </ThemeProvider>
+      </ThemeProvider>
+    </LazyMotion>
   );
 };
 export default MyApp;
