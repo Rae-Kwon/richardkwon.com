@@ -8,12 +8,12 @@ const CodeIcon = () => {
     >
       <a
         target="_blank"
-        href="https://github.com/Rae-Kwon"
+        href="https://github.com/Rae-Kwon/richardkwon.com/"
         rel="noopener noreferrer"
       >
         <div className="flex justify-center">
           <svg
-            xmlns="https://github.com/Rae-Kwon/richardkwon.com/"
+            xmlns="http://www.w3.org/2000/svg"
             className="h-[55px] w-[55px]"
             fill="none"
             viewBox="0 0 24 24"
