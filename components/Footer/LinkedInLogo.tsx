@@ -21,7 +21,7 @@ const LinkedInLogo = () => {
           placeholder="blur"
           className="dark:brightness-150 cursor-pointer"
         />
-        <p>LinkedIn Profile</p>
+        <p className="font-text">LinkedIn Profile</p>
       </a>
     </motion.div>
   );

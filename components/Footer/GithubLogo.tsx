@@ -23,7 +23,7 @@ const GithubLogo = () => {
           height={55}
           className="cursor-pointer"
         />
-        <p>Github Profile</p>
+        <p className="font-text">Github Profile</p>
       </a>
     </motion.div>
   );
