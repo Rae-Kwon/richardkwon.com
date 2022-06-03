@@ -1,5 +1,5 @@
 import type { Dispatch } from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 interface SuccessProps {
   setSuccess: Dispatch<boolean>;
@@ -22,7 +22,7 @@ const outlineVariant = {
 const Success = ({ setSuccess }: SuccessProps) => {
   return (
     <div className="flex flex-col items-center">
-      <motion.svg
+      <m.svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 128 128"
         width="100%"
@@ -31,7 +31,7 @@ const Success = ({ setSuccess }: SuccessProps) => {
         initial="initial"
         animate="animate"
       >
-        <motion.path
+        <m.path
           fill="none"
           stroke="#ffffff"
           strokeMiterlimit="10"
@@ -39,11 +39,11 @@ const Success = ({ setSuccess }: SuccessProps) => {
           d="M64 25A39 39 0 1 0 64 103A39 39 0 1 0 63 25Z"
           variants={outlineVariant}
         />
-        <motion.path
+        <m.path
           fill="#198754"
           d="M64 25A39 39 0 1 0 64 103A39 39 0 1 0 64 25Z"
         />
-        <motion.path
+        <m.path
           fill="none"
           stroke="#fff"
           strokeLinecap="round"
@@ -52,7 +52,7 @@ const Success = ({ setSuccess }: SuccessProps) => {
           d="M42 69L55.55 81 86 46"
           variants={outlineVariant}
         />
-      </motion.svg>
+      </m.svg>
       <p className="mt-5 text-white font-text">Need to send another message?</p>
       <button
         type="button"

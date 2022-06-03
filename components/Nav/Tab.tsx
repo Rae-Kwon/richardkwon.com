@@ -13,7 +13,7 @@ const Tab = ({ item, link }: TabProps) => {
       <a href={navTo(link)} target="_blank" rel="noopener noreferrer">
         <div className="flex flex-col items-center cursor-pointer">
           <Icon link={link} />
-          <li>{item}</li>
+          <p>{item}</p>
         </div>
       </a>
     );
@@ -22,7 +22,7 @@ const Tab = ({ item, link }: TabProps) => {
     <Link href={navTo(link)}>
       <div className="flex flex-col items-center cursor-pointer">
         <Icon link={link} />
-        <li>{item}</li>
+        <p>{item}</p>
       </div>
     </Link>
   );

@@ -14,7 +14,7 @@ module.exports = {
       },
       screens: {
         xs: "450px",
-        "3xl": "1980px",
+        "3xl": "1830px",
       },
       colors: {
         "midnight-blue": "#191970",

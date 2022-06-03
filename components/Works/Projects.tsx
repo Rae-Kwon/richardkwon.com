@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import Description from "./Description";
 import OutLink from "./OutLink";
 import ProjectImage from "./ProjectImage";
@@ -23,15 +23,18 @@ interface ProjectsProps {
 
 const projectContainer = {
   hidden: { opacity: 0, x: -200 },
-  show: { opacity: 1, x: 0, transition: { duration: 1.5, ease: "easeIn" } },
+  show: { opacity: 1, x: 0, transition: { duration: 0.75 } },
 };
 
 const Projects = ({ data }: ProjectsProps) => {
   return (
     <>
       {data.map((project) => (
-        <div key={project.id} className="flex justify-center drop-shadow-xl">
-          <motion.div
+        <div
+          key={project.id}
+          className="flex justify-center drop-shadow-xl max-w-[1280px] 3xl:max-w-full"
+        >
+          <m.div
             className="flex flex-col bg-gray-200 p-3 rounded-3xl md:flex-row dark:bg-slate-400"
             variants={projectContainer}
             initial="hidden"
@@ -84,7 +87,7 @@ const Projects = ({ data }: ProjectsProps) => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </m.div>
         </div>
       ))}
     </>

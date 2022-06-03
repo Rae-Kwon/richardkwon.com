@@ -1,15 +1,15 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import Description from "./Description";
 import Header from "../Header";
 
 const aboutContainer = {
   hidden: { opacity: 0, x: -150 },
-  show: { opacity: 1, x: 0, transition: { duration: 1.5, ease: "easeIn" } },
+  show: { opacity: 1, x: 0, transition: { duration: 0.75 } },
 };
 
 const About = () => {
   return (
-    <motion.section
+    <m.section
       id="about"
       className="m-10 sm:m-32"
       variants={aboutContainer}
@@ -19,7 +19,7 @@ const About = () => {
     >
       <Header heading="About Me" />
       <Description />
-    </motion.section>
+    </m.section>
   );
 };
 export default About;
