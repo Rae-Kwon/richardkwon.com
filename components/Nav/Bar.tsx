@@ -19,7 +19,17 @@ const Bar = ({ menuItems, refObj }: BarProps) => {
           const link = item.toLowerCase();
           return (
             <li key={index}>
-              <Link href={navTo(link)}>{item}</Link>
+              {link === "resume" ? (
+                <a
+                  href="/RichardKwonResume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {item}
+                </a>
+              ) : (
+                <Link href={navTo(link)}>{item}</Link>
+              )}
             </li>
           );
         })}
