@@ -22,8 +22,8 @@ interface ProjectsProps {
 }
 
 const projectContainer = {
-  hidden: { opacity: 0, x: -1000 },
-  show: { opacity: 1, x: 0, transition: { duration: 2 } },
+  hidden: { opacity: 0, x: -200 },
+  show: { opacity: 1, x: 0, transition: { duration: 1.5, ease: "easeIn" } },
 };
 
 const Projects = ({ data }: ProjectsProps) => {
