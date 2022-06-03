@@ -5,7 +5,7 @@ import Success from "./Success";
 const Contact = () => {
   const [success, setSuccess] = useState(false);
   return (
-    <div className="flex flex-col h-full items-center justify-center">
+    <div className="flex flex-col h-full items-center justify-center pt-5 pb-10 px-10">
       {success ? (
         <Success setSuccess={setSuccess} />
       ) : (
