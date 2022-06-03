@@ -44,7 +44,7 @@ const ContactForm = ({ setSuccess }: ContactFormProps) => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <fieldset className="grid grid-cols-2 gap-6 pt-5 pb-10 px-10 mb-10">
+      <fieldset className="grid grid-cols-2 gap-6">
         <legend className="text-4xl text-white font-subheadings">
           Contact Me
         </legend>
