@@ -7,7 +7,7 @@ interface ProjectImageProps {
 
 const ProjectImage = ({ image, description }: ProjectImageProps) => {
   return (
-    <div className="block max-w-[1280px] w-full">
+    <div className="max-w-[1280px] w-full">
       <Image
         src={image}
         alt={description}
