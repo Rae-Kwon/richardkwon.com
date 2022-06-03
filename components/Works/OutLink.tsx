@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { m } from "framer-motion";
+import { motion } from "framer-motion";
 
 interface OutLinkProps {
   link: string;
@@ -10,13 +10,13 @@ interface OutLinkProps {
 const OutLink = ({ link, children, text }: OutLinkProps) => {
   return (
     <a target="_blank" href={link} rel="noopener noreferrer">
-      <m.div
+      <motion.div
         className="flex flex-col items-center"
         whileHover={{ scale: 1.25, transition: { durtation: 0.5 } }}
       >
         {children}
         <p className="text-center">{text}</p>
-      </m.div>
+      </motion.div>
     </a>
   );
 };

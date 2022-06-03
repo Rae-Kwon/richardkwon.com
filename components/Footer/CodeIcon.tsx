@@ -1,8 +1,8 @@
-import { m } from "framer-motion";
+import { motion } from "framer-motion";
 
 const CodeIcon = () => {
   return (
-    <m.div
+    <motion.div
       className="flex items-center"
       whileHover={{ scale: 1.25, transition: { durtation: 0.5 } }}
     >
@@ -29,7 +29,7 @@ const CodeIcon = () => {
         </div>
         <p className="font-text">Source Code</p>
       </a>
-    </m.div>
+    </motion.div>
   );
 };
 export default CodeIcon;

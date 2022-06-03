@@ -1,4 +1,4 @@
-import { m } from "framer-motion";
+import { motion } from "framer-motion";
 import Description from "./Description";
 import Header from "../Header";
 
@@ -9,7 +9,7 @@ const aboutContainer = {
 
 const About = () => {
   return (
-    <m.section
+    <motion.section
       id="about"
       className="m-10 sm:m-32"
       variants={aboutContainer}
@@ -19,7 +19,7 @@ const About = () => {
     >
       <Header heading="About Me" />
       <Description />
-    </m.section>
+    </motion.section>
   );
 };
 export default About;
