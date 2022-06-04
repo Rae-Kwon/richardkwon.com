@@ -1,5 +1,5 @@
 import type { Ref } from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import Tab from "./Tab";
 
 interface TabsProps {
@@ -24,7 +24,7 @@ const container = {
 
 const Tabs = ({ menuItems, barInView }: TabsProps) => {
   return (
-    <motion.nav
+    <m.nav
       className="flex justify-center items-center w-full h-24 fixed bottom-0 shadow-lg bg-blue-400 dark:bg-blue-500 z-10"
       variants={container}
       animate={barInView ? "hidden" : "show"}
@@ -35,7 +35,7 @@ const Tabs = ({ menuItems, barInView }: TabsProps) => {
           return <Tab key={index} item={item} link={link} />;
         })}
       </div>
-    </motion.nav>
+    </m.nav>
   );
 };
 export default Tabs;

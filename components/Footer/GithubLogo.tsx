@@ -1,13 +1,13 @@
 import { useTheme } from "next-themes";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import GitHubLogoLight from "../../public/icons/GitHub-Mark-Light.png";
 import GitHubLogoDark from "../../public/icons/GitHub-Mark-Dark.png";
 
 const GithubLogo = () => {
   const { resolvedTheme } = useTheme();
   return (
-    <motion.div
+    <m.div
       className="flex text-center"
       whileHover={{ scale: 1.25, transition: { durtation: 0.5 } }}
     >
@@ -27,7 +27,7 @@ const GithubLogo = () => {
         />
         <p className="font-text">Github Profile</p>
       </a>
-    </motion.div>
+    </m.div>
   );
 };
 export default GithubLogo;

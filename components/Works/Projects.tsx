@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import Description from "./Description";
 import OutLink from "./OutLink";
 import ProjectImage from "./ProjectImage";
@@ -34,7 +34,7 @@ const Projects = ({ data }: ProjectsProps) => {
           key={project.id}
           className="flex justify-center drop-shadow-xl max-w-[1280px] 3xl:max-w-full"
         >
-          <motion.div
+          <m.div
             className="flex flex-col bg-gray-200 p-3 rounded-3xl md:flex-row dark:bg-slate-400"
             variants={projectContainer}
             initial="hidden"
@@ -87,7 +87,7 @@ const Projects = ({ data }: ProjectsProps) => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </m.div>
         </div>
       ))}
     </>
