@@ -43,10 +43,7 @@ const Projects = ({ data }: ProjectsProps) => {
           >
             <div className="grid gap-6 3xl:grid-cols-8">
               <div className="flex justify-center 3xl:justify-start 3xl:col-span-4">
-                <ProjectImage
-                  image={project.image}
-                  description={project.description}
-                />
+                <ProjectImage image={project.image} name={project.name} />
               </div>
               <div className="flex flex-col justify-around items-center m-4 gap-10 3xl:col-span-4">
                 <Title title={project.title} />

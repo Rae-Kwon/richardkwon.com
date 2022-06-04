@@ -10,7 +10,7 @@
             {"name": "TypeScript", "logoSrc": "/icons/Typescript-logo.png"},
             {"name": "OpenAI", "logoSrc": "/icons/OpenAI-logo.svg"}
         ],
-        "image": "/data/projects/images/fun-with-ai-preview.png",
+        "image": "fun-with-ai-preview",
         "imageDescription": "Preview Image of Fun With AI web app.",
         "siteLink": "https://bright-cassata-c74c95.netlify.app/",
         "githubLink": "https://github.com/Rae-Kwon/fun-with-ai-frontend"
@@ -25,7 +25,7 @@
             {"name": "Discord API", "logoSrc": "/icons/Discord-logo.png"},
             {"name": "Google Sheets API", "logoSrc": "/icons/GoogleSheets-logo.png"}
         ],
-        "image": "/data/projects/images/discord-bot-preview.png",
+        "image": "discord-bot-preview",
         "imageDescription": "Preview Image of Discord Bot.",
         "githubLink": "https://github.com/Rae-Kwon/valhalla-cb-bot"
     },
@@ -40,7 +40,7 @@
             {"name": "JavaScript", "logoSrc": "/icons/Javascript-logo.png"},
             {"name": "PostgreSql", "logoSrc": "/icons/PostgreSQL-logo.png"}
         ],
-        "image": "/data/projects/images/larrakia-language-kids-preview.png",
+        "image": "larrakia-language-kids-preview",
         "imageDescription": "Preview Image of Larrakia Language App for Kids web app.",
         "siteLink": "https://larrakia-language-kids.herokuapp.com/",
         "githubLink": "https://github.com/Rae-Kwon/larrakia-language-app"
