@@ -38,7 +38,7 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <Hero isHeroRendered={isHeroRendered} setHeroRender={setHeroRender} />
+      <Hero setHeroRender={setHeroRender} />
       {isHeroRendered ? (
         <>
           <Works projectData={projects} />

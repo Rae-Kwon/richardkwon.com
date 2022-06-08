@@ -1,4 +1,4 @@
-import type { Dispatch } from "react";
+import { Dispatch, useState } from "react";
 import { useEffect } from "react";
 import useScreenSize from "../../hooks/useScreenSize";
 import ActionArrow from "./ActionArrow";
@@ -6,16 +6,17 @@ import Intro from "./Intro";
 import SunMoonContainer from "./SunMoonContainer";
 
 interface HeroProps {
-  isHeroRendered: boolean;
   setHeroRender: Dispatch<boolean>;
 }
 
-const Hero = ({ isHeroRendered, setHeroRender }: HeroProps) => {
+const Hero = ({ setHeroRender }: HeroProps) => {
+  const [isMounted, setMounted] = useState(false);
   const { height } = useScreenSize();
 
+  useEffect(() => setMounted(true), []);
   useEffect(() => setHeroRender(true), [setHeroRender]);
 
-  if (!isHeroRendered) return null;
+  if (!isMounted) return null;
 
   return (
     <section
