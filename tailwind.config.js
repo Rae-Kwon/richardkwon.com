@@ -14,7 +14,6 @@ module.exports = {
       },
       screens: {
         xs: "450px",
-        "3xl": "1830px",
       },
       colors: {
         "midnight-blue": "#191970",
@@ -23,7 +22,7 @@ module.exports = {
         "light-cyan": "#DDFEEC",
       },
       boxShadow: {
-        xl: "0 0 100px",
+        xl: "0 0 65px",
       },
       spacing: {
         "5p": "5%",

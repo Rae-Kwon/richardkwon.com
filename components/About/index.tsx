@@ -11,7 +11,7 @@ const About = () => {
   return (
     <m.section
       id="about"
-      className="m-10 sm:m-32"
+      className="h-fit m-10 sm:m-32"
       variants={aboutContainer}
       initial="hidden"
       whileInView="show"

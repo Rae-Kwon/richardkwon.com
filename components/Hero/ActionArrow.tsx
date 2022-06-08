@@ -3,8 +3,8 @@ import Link from "next/link";
 
 const ActionArrow = () => {
   return (
-    <div className="flex justify-center items-end mb-20">
-      <Link href="#projects">
+    <div className="row-start-3 flex justify-center items-end mt-auto mb-20">
+      <Link href="#projects" scroll={false} prefetch={false}>
         <div className="flex flex-col items-center cursor-pointer">
           <h2 className="hero-action-heading">See what I can do</h2>
           <m.svg

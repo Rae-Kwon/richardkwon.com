@@ -2,7 +2,7 @@ import Ground from "./Ground";
 
 const Footer = () => {
   return (
-    <footer id="contact">
+    <footer id="contact" className="h-fit">
       <Ground />
     </footer>
   );

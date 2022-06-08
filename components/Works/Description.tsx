@@ -3,6 +3,6 @@ interface DescriptionProps {
 }
 
 const Description = ({ description }: DescriptionProps) => {
-  return <p className="text-xl 3xl:w-3/4">{description}</p>;
+  return <p className="text-xl">{description}</p>;
 };
 export default Description;

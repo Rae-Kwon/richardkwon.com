@@ -5,7 +5,7 @@ import LinkedInStamp from "../../public/icons/LinkedIn-Logo.png";
 const LinkedInLogo = () => {
   return (
     <m.div
-      className="flex text-center"
+      className="flex text-center w-[64px] h-[54.425]"
       whileHover={{ scale: 1.25, transition: { durtation: 0.5 } }}
     >
       <a
@@ -16,8 +16,6 @@ const LinkedInLogo = () => {
         <Image
           src={LinkedInStamp}
           alt="LinkedIn Logo"
-          width={64}
-          height={54.425}
           className="dark:brightness-150 cursor-pointer"
           loading="lazy"
           placeholder="blur"
