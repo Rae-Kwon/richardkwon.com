@@ -13,8 +13,6 @@ const Skill = ({ tech }: SkillProps) => {
           width={40}
           height={40}
           alt={`${tech.name} logo`}
-          placeholder="blur"
-          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8Xw8AAoMBgDTD2qgAAAAASUVORK5CYII="
         />
       </div>
 
