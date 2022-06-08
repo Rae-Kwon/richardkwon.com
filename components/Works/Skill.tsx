@@ -5,11 +5,12 @@ interface SkillProps {
 }
 
 const Skill = ({ tech }: SkillProps) => {
+  console.log(tech.logoSrc);
   return (
     <div className="flex flex-col items-center sm:basis-0">
       <div>
         <Image
-          src={require(`../../public/icons/${tech.logoSrc}`).default}
+          src={require(`../../public/icons/${tech.logoSrc}.png`).default}
           width={40}
           height={40}
           alt={`${tech.name} logo`}
