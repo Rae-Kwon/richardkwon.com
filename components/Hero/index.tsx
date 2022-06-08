@@ -13,7 +13,7 @@ interface HeroProps {
 const Hero = ({ isHeroRendered, setHeroRender }: HeroProps) => {
   const { height } = useScreenSize();
 
-  useEffect(() => setHeroRender(true), []);
+  useEffect(() => setHeroRender(true), [setHeroRender]);
 
   if (!isHeroRendered) return null;
 
