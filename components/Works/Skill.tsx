@@ -10,10 +10,12 @@ const Skill = ({ name, logoSrc }: SkillProps) => {
     <div className="flex flex-col items-center sm:basis-0">
       <div>
         <Image
-          src={require(`../../public/icons/${logoSrc}.png`).default}
+          src={`/icons/${logoSrc}.png`}
           width={40}
           height={40}
           alt={`${name} logo`}
+          placeholder="blur"
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8Xw8AAoMBgDTD2qgAAAAASUVORK5CYII="
         />
       </div>
 

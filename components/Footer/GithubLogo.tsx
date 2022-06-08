@@ -18,6 +18,7 @@ const GithubLogo = () => {
           alt="Github Logo"
           loading="lazy"
           placeholder="blur"
+          className="invert dark:invert-0"
         />
         <p className="font-text">Github Profile</p>
       </a>
