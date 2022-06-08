@@ -7,7 +7,7 @@ export const projects = [
         "technologies": [
             {"name": "React", "logoSrc": "React-logo"},
             {"name": "Next.js", "logoSrc": "Nextjs-logo"},
-            {"name": "TypeScript", "logoSrc": "Typescript-logo"},
+            {"name": "TypeScript", "logoSrc": "TypeScript-logo"},
             {"name": "OpenAI", "logoSrc": "OpenAI-logo"}
         ],
         "image": "fun-with-ai-preview",
@@ -21,7 +21,7 @@ export const projects = [
         "name": "vallhalla-cb-bot",
         "description": "A Discord bot for the mobile game Princess Connect Re:Dive that gets a users input and sends it to a Google Sheet. This allows easy, automatic logging of attack scores and easy maintenance for clan leads.",
         "technologies": [
-            {"name": "JavaScript", "logoSrc": "Javascript-logo"},
+            {"name": "JavaScript", "logoSrc": "JavaScript-logo"},
             {"name": "Discord API", "logoSrc": "Discord-logo"},
             {"name": "Google Sheets API", "logoSrc": "GoogleSheets-logo"}
         ],
@@ -37,7 +37,7 @@ export const projects = [
         "technologies": [
             {"name": "React", "logoSrc": "React-logo"},
             {"name": "Redux", "logoSrc": "Redux-logo"},
-            {"name": "JavaScript", "logoSrc": "Javascript-logo"},
+            {"name": "JavaScript", "logoSrc": "JavaScript-logo"},
             {"name": "PostgreSql", "logoSrc": "PostgreSQL-logo"}
         ],
         "image": "larrakia-language-kids-preview",
