@@ -1,11 +1,8 @@
-import { useTheme } from "next-themes";
 import Image from "next/image";
 import { m } from "framer-motion";
-import GitHubLogoLight from "../../public/icons/GitHub-Mark-Light.png";
-import GitHubLogoDark from "../../public/icons/GitHub-Mark-Dark.png";
+import GitHubLogo from "../../public/icons/GitHub-Mark-Light.png";
 
 const GithubLogo = () => {
-  const { resolvedTheme } = useTheme();
   return (
     <m.div
       className="flex text-center w-14 h-14"
@@ -17,9 +14,8 @@ const GithubLogo = () => {
         rel="noopener noreferrer"
       >
         <Image
-          src={resolvedTheme === "dark" ? GitHubLogoLight : GitHubLogoDark}
+          src={GitHubLogo}
           alt="Github Logo"
-          className="cursor-pointer"
           loading="lazy"
           placeholder="blur"
         />
