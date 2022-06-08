@@ -1,5 +1,6 @@
 import type { NextPage, InferGetStaticPropsType } from "next";
 import Head from "next/head";
+import { useState } from "react";
 import { projects } from "../public/data/projects";
 import About from "../components/About";
 import Footer from "../components/Footer";
@@ -18,6 +19,7 @@ export const getStaticProps = async () => {
 const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   projects,
 }) => {
+  const [isHeroRendered, setHeroRender] = useState(false);
   return (
     <div>
       <Head>
@@ -36,10 +38,16 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <Hero />
-      {projects ? <Works projectData={projects} /> : <div>Loading...</div>}
-      <About />
-      <Footer />
+      <Hero setHeroRender={setHeroRender} />
+      {isHeroRendered ? (
+        <>
+          <Works projectData={projects} />
+          <About />
+          <Footer />
+        </>
+      ) : (
+        <div>Loading...</div>
+      )}
     </div>
   );
 };
