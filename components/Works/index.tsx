@@ -20,12 +20,16 @@ interface WorksProps {
 const Works = ({ projectData }: WorksProps) => {
   return (
     <section id="projects">
-      <div className="mx-10 sm:mx-32">
-        <Header heading="Projects" />
-        <div className="flex flex-col gap-52 w-fit">
-          <Projects projectData={projectData} />
+      {projectData ? (
+        <div className="mx-10 sm:mx-32">
+          <Header heading="Projects" />
+          <div className="flex flex-col gap-52 w-fit">
+            <Projects projectData={projectData} />
+          </div>
         </div>
-      </div>
+      ) : (
+        <div>Loading...</div>
+      )}
     </section>
   );
 };

@@ -5,7 +5,6 @@ interface SkillProps {
 }
 
 const Skill = ({ tech }: SkillProps) => {
-  console.log(tech.logoSrc);
   return (
     <div className="flex flex-col items-center sm:basis-0">
       <div>
