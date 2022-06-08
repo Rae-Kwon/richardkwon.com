@@ -19,7 +19,7 @@ const Tab = ({ item, link }: TabProps) => {
     );
   }
   return (
-    <Link href={navTo(link)}>
+    <Link href={navTo(link)} prefetch={false}>
       <div className="flex flex-col items-center cursor-pointer">
         <Icon link={link} />
         <p>{item}</p>

@@ -16,6 +16,8 @@ const ProjectImage = ({ image, name }: ProjectImageProps) => {
         layout="responsive"
         sizes="128, 256, 384, 640, 750, 828, 1080, 1200, 1920"
         loading="lazy"
+        placeholder="blur"
+        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8Xw8AAoMBgDTD2qgAAAAASUVORK5CYII="
       />
     </div>
   );

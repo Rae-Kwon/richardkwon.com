@@ -1,24 +1,28 @@
-import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
+import type { Dispatch } from "react";
+import { useEffect } from "react";
+import useScreenSize from "../../hooks/useScreenSize";
 import ActionArrow from "./ActionArrow";
 import Intro from "./Intro";
-import Moon from "./Moon";
-import Sun from "./Sun";
+import SunMoonContainer from "./SunMoonContainer";
 
-const Hero = () => {
-  const [mounted, setMounted] = useState(false);
-  const { resolvedTheme, setTheme } = useTheme();
+interface HeroProps {
+  isHeroRendered: boolean;
+  setHeroRender: Dispatch<boolean>;
+}
 
-  useEffect(() => setMounted(true), []);
+const Hero = ({ isHeroRendered, setHeroRender }: HeroProps) => {
+  const { height } = useScreenSize();
 
-  if (!mounted) return null;
+  useEffect(() => setHeroRender(true), []);
+
+  if (!isHeroRendered) return null;
 
   return (
-    <section className="h-screen overflow-y-auto grid grid-rows-3 justify-center break-word">
-      <div className="flex justify-center items-center">
-        <Sun theme={resolvedTheme} setTheme={setTheme} />
-        <Moon theme={resolvedTheme} setTheme={setTheme} />
-      </div>
+    <section
+      className="flex flex-col break-word"
+      style={{ height: `${height}px` }}
+    >
+      <SunMoonContainer />
       <Intro />
       <ActionArrow />
     </section>

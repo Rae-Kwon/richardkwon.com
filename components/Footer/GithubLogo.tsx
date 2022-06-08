@@ -8,7 +8,7 @@ const GithubLogo = () => {
   const { resolvedTheme } = useTheme();
   return (
     <m.div
-      className="flex text-center"
+      className="flex text-center w-14 h-14"
       whileHover={{ scale: 1.25, transition: { durtation: 0.5 } }}
     >
       <a
@@ -19,8 +19,6 @@ const GithubLogo = () => {
         <Image
           src={resolvedTheme === "dark" ? GitHubLogoLight : GitHubLogoDark}
           alt="Github Logo"
-          width={55}
-          height={55}
           className="cursor-pointer"
           loading="lazy"
           placeholder="blur"

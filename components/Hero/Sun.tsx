@@ -25,7 +25,7 @@ const Sun = ({ theme, setTheme }: any) => {
       animate={theme === "dark" ? "isDark" : "isLight"}
       variants={variants}
       initial={false}
-      className="w-40 h-40 rounded-full shadow-xl shadow-orange-400 bg-gradient-to-b from-orange-200 via-yellow-200 to-orange-200 absolute"
+      className="absolute w-32 h-32 xs:w-40 xs:h-40 rounded-full shadow-xl shadow-orange-400 bg-gradient-to-b from-orange-200 via-yellow-200 to-orange-200"
       role="button"
     />
   );

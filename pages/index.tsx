@@ -1,12 +1,25 @@
-import type { NextPage } from "next";
+import type { NextPage, InferGetStaticPropsType } from "next";
+import { projects } from "../public/data/projects";
 import Head from "next/head";
 import About from "../components/About";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import Navbar from "../components/Nav";
 import Works from "../components/Works";
+import { useState } from "react";
 
-const Home: NextPage = () => {
+export const getStaticProps = async () => {
+  return {
+    props: {
+      projects,
+    },
+  };
+};
+
+const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
+  projects,
+}) => {
+  const [isHeroRendered, setHeroRender] = useState(false);
   return (
     <div>
       <Head>
@@ -25,10 +38,16 @@ const Home: NextPage = () => {
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <Hero />
-      <Works />
-      <About />
-      <Footer />
+      <Hero isHeroRendered={isHeroRendered} setHeroRender={setHeroRender} />
+      {isHeroRendered ? (
+        <>
+          <Works projectData={projects} />
+          <About />
+          <Footer />
+        </>
+      ) : (
+        <div>Loading...</div>
+      )}
     </div>
   );
 };

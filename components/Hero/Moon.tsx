@@ -25,7 +25,7 @@ const Moon = ({ theme, setTheme }: any) => {
       animate={theme === "dark" ? "isDark" : "isLight"}
       variants={variants}
       initial={false}
-      className="w-40 h-40 rounded-full bg-white shadow-xl shadow-white absolute"
+      className="absolute w-32 h-32 xs:w-40 xs:h-40 rounded-full bg-white shadow-xl shadow-white"
       role="button"
     />
   );
