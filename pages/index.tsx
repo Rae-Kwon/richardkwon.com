@@ -20,6 +20,7 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   projects,
 }) => {
   const [isHeroRendered, setHeroRender] = useState(false);
+  console.log(isHeroRendered);
   return (
     <div>
       <Head>
@@ -39,15 +40,9 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
       </Head>
       <Navbar />
       <Hero setHeroRender={setHeroRender} />
-      {isHeroRendered ? (
-        <>
-          <Works projectData={projects} />
-          <About />
-          <Footer />
-        </>
-      ) : (
-        <div>Loading...</div>
-      )}
+      <Works projectData={projects} />
+      <About />
+      <Footer />
     </div>
   );
 };
