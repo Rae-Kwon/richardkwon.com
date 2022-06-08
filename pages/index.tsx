@@ -7,6 +7,7 @@ import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import Navbar from "../components/Nav";
 import Works from "../components/Works";
+import Loading from "../components/Loading";
 
 export const getStaticProps = async () => {
   return {
@@ -46,7 +47,7 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           <Footer />
         </>
       ) : (
-        <div>Loading...</div>
+        <Loading />
       )}
     </div>
   );
