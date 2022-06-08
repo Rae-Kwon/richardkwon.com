@@ -37,7 +37,7 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
       </Head>
       <Navbar />
       <Hero />
-      <Works projectData={projects} />
+      {projects ? <Works projectData={projects} /> : <div>Loading...</div>}
       <About />
       <Footer />
     </div>
