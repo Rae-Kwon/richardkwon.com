@@ -1,12 +1,12 @@
 import type { NextPage, InferGetStaticPropsType } from "next";
-import { projects } from "../public/data/projects";
 import Head from "next/head";
+import { useState } from "react";
+import { projects } from "../public/data/projects";
 import About from "../components/About";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import Navbar from "../components/Nav";
 import Works from "../components/Works";
-import { useState } from "react";
 
 export const getStaticProps = async () => {
   return {

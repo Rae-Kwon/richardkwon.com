@@ -1,4 +1,5 @@
-import { ComponentState, Ref, useState } from "react";
+import type { ComponentState } from "react";
+import { Ref, useState } from "react";
 import Menu from "react-burger-menu/lib/menus/slide";
 import MenuItem from "./MenuItem";
 

@@ -1,4 +1,5 @@
-import { Dispatch, useState } from "react";
+import type { Dispatch } from "react";
+import { useState } from "react";
 import { useEffect } from "react";
 import useScreenSize from "../../hooks/useScreenSize";
 import ActionArrow from "./ActionArrow";
