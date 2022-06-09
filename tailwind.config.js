@@ -1,4 +1,5 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
+const plugin = require("tailwindcss/plugin");
 
 module.exports = {
   content: [
@@ -48,5 +49,9 @@ module.exports = {
     },
   },
   darkMode: "class",
-  plugins: [],
+  plugins: [
+    plugin(function ({ addVariant }) {
+      addVariant("second", "&:nth-child(2)");
+    }),
+  ],
 };

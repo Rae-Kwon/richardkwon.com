@@ -21,7 +21,7 @@ const Hero = ({ setHeroRender }: HeroProps) => {
 
   return (
     <section
-      className="flex flex-col break-word"
+      className="flex flex-col break-word overflow-hidden"
       style={{ height: `${height}px` }}
     >
       <SunMoonContainer />
