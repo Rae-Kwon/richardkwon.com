@@ -31,14 +31,8 @@ const Description = () => {
         asset to you.
       </p>
       <p>
-        I currently have&nbsp;
-        <span className="underline underline-offset-4 decoration-red-400">
-          work authorization
-        </span>
-        &nbsp;with a pending&nbsp;
-        <span className="underline underline-offset-4 decoration-green-300">
-          permanent residency visa.
-        </span>
+        I currently have work authorization with a pending permanent residency
+        visa.
       </p>
     </div>
   );
