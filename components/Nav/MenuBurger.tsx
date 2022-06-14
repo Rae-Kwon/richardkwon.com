@@ -20,7 +20,7 @@ const MenuBurger = ({ menuItems, refObj }: MenuBurgerProps) => {
   };
 
   return (
-    <div ref={refObj} className="h-14">
+    <div ref={refObj} className="flex h-14 -z-20">
       <Menu
         isOpen={menuOpen}
         onStateChange={(state: ComponentState) => handleStateChange(state)}

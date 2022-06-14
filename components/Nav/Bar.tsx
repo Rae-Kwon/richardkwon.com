@@ -10,7 +10,7 @@ interface BarProps {
 const Bar = ({ menuItems, refObj }: BarProps) => {
   return (
     <nav
-      className="flex w-full justify-center h-14 font-subheadings"
+      className="flex w-full justify-center h-14 font-subheadings z-20"
       ref={refObj}
     >
       <div className="flex w-4/5 justify-around items-center">
