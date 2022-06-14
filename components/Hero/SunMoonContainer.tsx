@@ -6,7 +6,7 @@ const SunMoonContainer = () => {
   const { resolvedTheme, setTheme } = useTheme();
 
   return (
-    <div className="h-1/4 flex justify-center items-center z-50">
+    <div className="h-1/4 flex justify-center items-center">
       <Sun theme={resolvedTheme} setTheme={setTheme} />
       <Moon theme={resolvedTheme} setTheme={setTheme} />
     </div>
