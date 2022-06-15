@@ -1,4 +1,3 @@
-import Header from "../Header";
 import Projects from "./Projects";
 
 interface ProjectDataTypes {
@@ -19,13 +18,11 @@ interface WorksProps {
 
 const Works = ({ projectData }: WorksProps) => {
   return (
-    <section id="projects">
-      <div className="mx-10 sm:mx-32">
-        <Header heading="Projects" />
-        <div className="flex flex-col gap-52 w-fit">
-          <Projects projectData={projectData} />
-        </div>
-      </div>
+    <section
+      id="projects"
+      className="grid grid-cols-1 gap-16 w-4/5 mx-auto xs:gap-28"
+    >
+      <Projects projectData={projectData} />
     </section>
   );
 };

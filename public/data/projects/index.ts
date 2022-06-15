@@ -4,6 +4,7 @@ export const projects = [
         "title": "Fun With AI",
         "name": "fun-with-ai",
         "description": "A responsive web app that utilizes the power of OpenAI to give you a song based on your mood. Type in your mood to get a response from Lil Nost X or click on one of the prompts to help you.",
+        "category": "Web App",
         "technologies": [
             {"name": "React", "logoSrc": "React-logo"},
             {"name": "Next.js", "logoSrc": "Nextjs-logo"},
@@ -12,14 +13,17 @@ export const projects = [
         ],
         "image": "fun-with-ai-preview",
         "imageDescription": "Preview Image of Fun With AI web app.",
+        "thumbnail": "fun-with-ai-thumbnail",
+        "thumbnailDescription": "Thumbnail Image of Fun With AI web app.",
         "siteLink": "https://bright-cassata-c74c95.netlify.app/",
         "githubLink": "https://github.com/Rae-Kwon/fun-with-ai-frontend"
     },
     {
         "id": 2,
-        "title": "Val-chan Discord Bot",
+        "title": "Val-chan",
         "name": "vallhalla-cb-bot",
         "description": "A Discord bot for the mobile game Princess Connect Re:Dive that gets a users input and sends it to a Google Sheet. This allows easy, automatic logging of attack scores and easy maintenance for clan leads.",
+        "category": "Discord Bot", 
         "technologies": [
             {"name": "JavaScript", "logoSrc": "JavaScript-logo"},
             {"name": "Discord API", "logoSrc": "Discord-logo"},
@@ -34,6 +38,7 @@ export const projects = [
         "title": "Larrakia Language App for Kids",
         "name": "larrakia-language-app-for-kids",
         "description": "A web app for desktop that teaches kids some words from the Larrakia Australian Aboriginal language. The app allows you to play a few games to get to know the Larrakia language.",
+        "category": "Web App",
         "technologies": [
             {"name": "React", "logoSrc": "React-logo"},
             {"name": "Redux", "logoSrc": "Redux-logo"},

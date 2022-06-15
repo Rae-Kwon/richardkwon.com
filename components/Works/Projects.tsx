@@ -20,12 +20,7 @@ const Projects = ({ projectData }: ProjectsProps) => {
   return (
     <>
       {projectData.map((project) => (
-        <div
-          key={project.id}
-          className="flex justify-center drop-shadow-xl max-w-[1280px]"
-        >
-          <Project project={project} />
-        </div>
+        <Project key={project.id} project={project} />
       ))}
     </>
   );

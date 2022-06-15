@@ -7,14 +7,11 @@ interface ProjectImageProps {
 
 const ProjectImage = ({ image, name }: ProjectImageProps) => {
   return (
-    <div className="max-w-[1280px] w-full">
+    <div className="mx-auto max-w-full md:max-w-[970px]">
       <Image
         src={require(`../../public/data/projects/images/${image}.png`).default}
         alt={`Preview screenshot of ${name}`}
-        width={1280}
-        height={720}
         layout="responsive"
-        sizes="128, 256, 384, 640, 750, 828, 1080, 1200, 1920"
         loading="lazy"
         placeholder="blur"
         blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8Xw8AAoMBgDTD2qgAAAAASUVORK5CYII="
