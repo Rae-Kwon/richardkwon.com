@@ -21,7 +21,7 @@ const Document = () => {
           }}
         />
       </Head>
-      <body className="bg-sky-400 dark:bg-midnight-blue overflow-x-hidden">
+      <body className="bg-sky-400 dark:bg-midnight-blue">
         <Main />
         <NextScript />
       </body>
